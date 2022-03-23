@@ -1,4 +1,4 @@
-#Create Ranges
+# Create Ranges
 This project takes in a list of numbers and returns a list of Stings which are grouped into ranges provided that they are consecutive.
 
 The following code;

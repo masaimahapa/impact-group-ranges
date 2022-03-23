@@ -3,9 +3,19 @@ import java.util.*;
 public class RangeBuilder{
 
     static ArrayList<String> createRanges(int[] numbers){
-
         ArrayList<String> rangeList = new ArrayList<String>();
-        int rangeStart = numbers[0];
+        int rangeStart;
+
+        if(numbers.length==0){
+            return rangeList;
+        } else if(numbers.length==1){
+            rangeStart = numbers[0];
+            rangeList.add(new Range(rangeStart).toString());
+            return rangeList;
+        }
+
+
+        rangeStart = numbers[0];
         int currentNum=0;
 
         for(int i=1; i<numbers.length; i++){
